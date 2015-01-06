@@ -1,0 +1,15 @@
+<ptrng-name></ptrng-name><br>
+<br>
+Filtruj po <b>event</b>: <input type="text" ng-model="search.event" placeholder="Wpisz event">
+<table class="note">
+    <tr>
+        <th>przedmiot</th>
+        <th>event</th>
+        <th><a href="" ng-click="reverse=!reverse;order('ocena',reverse)">ocena</a></th>
+    </tr>
+    <tr ng-repeat="note in notes | filter:search">
+        <td>{{note.przedmiot}}</td>
+        <td>{{note.event}}</td>
+        <td>{{note.ocena}}</td>
+    </tr>
+</table>
